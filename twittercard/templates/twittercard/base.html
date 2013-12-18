@@ -1,10 +1,12 @@
+{# https://dev.twitter.com/docs/cards/validation/validator #}
 {% block card %}
-{% if card %}<meta name="twitter:card" content="{{ card }}">{% endif %}
-{% if site %}<meta name="twitter:site" content="{{ site }}">{% endif %}
-{% if site_id %}<meta name="twitter:site:id" content="{{ site_id }}">{% endif %}
-{% if creator %}<meta name="twitter:creator" content="{{ creator }}">{% endif %}
-{% if creator_id %}<meta name="twitter:creator:id" content="{{ creator_id }}">{% endif %}
-{% if title %}<meta name="twitter:title" content="{{ title|striptags|slice:'70' }}"/>{% endif %}
-{% if description %}<meta name="twitter:description" content="{{ description|striptags|slice:'200' }}">{% endif %}
-{% if image %}<meta name="twitter:image" content="{{ image }}">{% endif %}
+    {% if card %}<meta name="twitter:card" content="{{ card }}">{% endif %}
+    {% if site %}<meta name="twitter:site" content="{{ site }}">{% endif %}
+    {% if site_id %}<meta name="twitter:site:id" content="{{ site_id }}">{% endif %}
+    {% if creator %}<meta name="twitter:creator" content="{{ creator }}">{% endif %}
+    {% if creator_id %}<meta name="twitter:creator:id" content="{{ creator_id }}">{% endif %}
+    {% if title %}<meta name="twitter:title" content="{{ title|striptags|slice:'70' }}"/>{% endif %}
+    {% if description %}<meta name="twitter:description" content="{{ description|striptags|slice:'200' }}">{% endif %}
+    {% if image %}<meta name="twitter:image:src" content="{{ image }}">{% endif %}
+    {% if url %}<meta name="twitter:domain" content="{{ url }}">{% endif %}
 {% endblock %}

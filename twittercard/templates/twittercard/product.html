@@ -1,0 +1,12 @@
+{% extends 'twittercard/base.html' %}
+{% block card %}
+    {{ block.super }}
+    {% if price %}
+        <meta name="twitter:data1" content="{{ price }}">
+        <meta name="twitter:label1" content="PRICE">
+    {% endif %}
+    {% if location %}
+        <meta name="twitter:data2" content="{{ location }}">
+        <meta name="twitter:label2" content="LOCATION">
+    {% endif %}
+{% endblock %}
